@@ -32,11 +32,11 @@ const Skills = () => {
       icon: Code2,
       color: "from-blue-500 to-purple-600",
       skills: [
-        { name: "Python", icon: Terminal, level: 90 },
-        { name: "JavaScript", icon: FileCode, level: 85 },
-        { name: "TypeScript", icon: FileCode, level: 80 },
-        { name: "C", icon: Code2, level: 75 },
-        { name: "Kotlin", icon: Smartphone, level: 70 }
+        { name: "Python", icon: Terminal },
+        { name: "JavaScript", icon: FileCode },
+        { name: "TypeScript", icon: FileCode },
+        { name: "C", icon: Code2 },
+        { name: "Kotlin", icon: Smartphone }
       ]
     },
     {
@@ -44,12 +44,12 @@ const Skills = () => {
       icon: Globe,
       color: "from-green-500 to-teal-600",
       skills: [
-        { name: "React.js", icon: Layers, level: 90 },
-        { name: "Node.js", icon: Server, level: 85 },
-        { name: "Express.js", icon: Zap, level: 80 },
-        { name: "HTML5", icon: Monitor, level: 95 },
-        { name: "CSS3", icon: Palette, level: 90 },
-        { name: "Tailwind CSS", icon: Sparkles, level: 88 }
+        { name: "React.js", icon: Layers },
+        { name: "Node.js", icon: Server },
+        { name: "Express.js", icon: Zap },
+        { name: "HTML5", icon: Monitor },
+        { name: "CSS3", icon: Palette },
+        { name: "Tailwind CSS", icon: Sparkles }
       ]
     },
     {
@@ -57,9 +57,9 @@ const Skills = () => {
       icon: Smartphone,
       color: "from-orange-500 to-red-600",
       skills: [
-        { name: "React Native", icon: Smartphone, level: 85 },
-        { name: "Android Studio", icon: Settings, level: 75 },
-        { name: "Flutter", icon: Layers, level: 70 }
+        { name: "React Native", icon: Smartphone },
+        { name: "Android Studio", icon: Settings },
+        { name: "Flutter", icon: Layers }
       ]
     },
     {
@@ -67,11 +67,11 @@ const Skills = () => {
       icon: Database,
       color: "from-indigo-500 to-blue-600",
       skills: [
-        { name: "MongoDB", icon: Database, level: 85 },
-        { name: "Firebase", icon: Zap, level: 80 },
-        { name: "MySQL", icon: Server, level: 75 },
-        { name: "PostgreSQL", icon: Database, level: 70 },
-        { name: "REST APIs", icon: Workflow, level: 88 }
+        { name: "MongoDB", icon: Database },
+        { name: "Firebase", icon: Zap },
+        { name: "MySQL", icon: Server },
+        { name: "PostgreSQL", icon: Database },
+        { name: "REST APIs", icon: Workflow }
       ]
     },
     {
@@ -79,11 +79,11 @@ const Skills = () => {
       icon: Brain,
       color: "from-purple-500 to-pink-600",
       skills: [
-        { name: "NumPy", icon: Cpu, level: 80 },
-        { name: "Scikit-Learn", icon: Brain, level: 75 },
-        { name: "TensorFlow", icon: Rocket, level: 70 },
-        { name: "Jupyter", icon: FileCode, level: 85 },
-        { name: "GenAI", icon: Sparkles, level: 78 }
+        { name: "NumPy", icon: Cpu },
+        { name: "Scikit-Learn", icon: Brain },
+        { name: "TensorFlow", icon: Rocket },
+        { name: "Jupyter", icon: FileCode },
+        { name: "GenAI", icon: Sparkles }
       ]
     },
     {
@@ -91,10 +91,10 @@ const Skills = () => {
       icon: Palette,
       color: "from-pink-500 to-rose-600",
       skills: [
-        { name: "Figma", icon: Palette, level: 85 },
-        { name: "Canva", icon: Star, level: 80 },
-        { name: "VS Code", icon: Code2, level: 95 },
-        { name: "Git/GitHub", icon: GitBranch, level: 90 }
+        { name: "Figma", icon: Palette },
+        { name: "Canva", icon: Star },
+        { name: "VS Code", icon: Code2 },
+        { name: "Git/GitHub", icon: GitBranch }
       ]
     },
     {
@@ -102,10 +102,10 @@ const Skills = () => {
       icon: Target,
       color: "from-teal-500 to-cyan-600",
       skills: [
-        { name: "Agile", icon: Target, level: 85 },
-        { name: "Scrum", icon: Trophy, level: 80 },
-        { name: "DevOps", icon: Settings, level: 75 },
-        { name: "CI/CD", icon: Workflow, level: 78 }
+        { name: "Agile", icon: Target },
+        { name: "Scrum", icon: Trophy },
+        { name: "DevOps", icon: Settings },
+        { name: "CI/CD", icon: Workflow }
       ]
     },
     {
@@ -113,10 +113,10 @@ const Skills = () => {
       icon: Cloud,
       color: "from-cyan-500 to-blue-600",
       skills: [
-        { name: "AWS", icon: Cloud, level: 75 },
-        { name: "Azure", icon: Shield, level: 70 },
-        { name: "GCP", icon: Cloud, level: 68 },
-        { name: "Razorpay", icon: Zap, level: 85 }
+        { name: "AWS", icon: Cloud },
+        { name: "Azure", icon: Shield },
+        { name: "GCP", icon: Cloud },
+        { name: "Razorpay", icon: Zap }
       ]
     }
   ];
@@ -172,41 +172,23 @@ const Skills = () => {
                     </div>
                   </div>
 
-                  {/* Skills List */}
-                  <div className="space-y-4">
+                  {/* Skills Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {category.skills.map((skill, skillIndex) => {
                       const SkillIcon = skill.icon;
                       return (
                         <div
                           key={skill.name}
-                          className="group/skill flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-all duration-300 cursor-pointer"
-                          style={{ animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.05)}s` }}
+                          className="group/skill flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-primary/5 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                          style={{ animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.08)}s` }}
                         >
-                          <div className="p-2 bg-muted/50 rounded-lg group-hover/skill:bg-primary/10 group-hover/skill:scale-110 transition-all duration-300">
-                            <SkillIcon className="w-4 h-4 text-muted-foreground group-hover/skill:text-primary" />
+                          <div className={`p-3 bg-gradient-to-br ${category.color} rounded-xl group-hover/skill:scale-110 group-hover/skill:rotate-6 transition-all duration-300 shadow-lg group-hover/skill:shadow-xl`}>
+                            <SkillIcon className="w-6 h-6 text-white" />
                           </div>
                           
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between mb-1">
-                              <span className="font-medium text-foreground group-hover/skill:text-primary transition-colors duration-300">
-                                {skill.name}
-                              </span>
-                              <span className="text-xs text-muted-foreground font-mono">
-                                {skill.level}%
-                              </span>
-                            </div>
-                            
-                            {/* Progress Bar */}
-                            <div className="h-1.5 bg-muted/50 rounded-full overflow-hidden">
-                              <div 
-                                className={`h-full bg-gradient-to-r ${category.color} rounded-full transition-all duration-1000 ease-out group-hover/skill:shadow-lg`}
-                                style={{ 
-                                  width: `${skill.level}%`,
-                                  animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.1) + 0.5}s`
-                                }}
-                              />
-                            </div>
-                          </div>
+                          <span className="text-sm font-medium text-foreground text-center group-hover/skill:text-primary transition-colors duration-300">
+                            {skill.name}
+                          </span>
                         </div>
                       );
                     })}
