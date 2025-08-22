@@ -26,99 +26,17 @@ import {
 } from 'lucide-react';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Programming Languages",
-      icon: Code2,
-      color: "from-blue-500 to-purple-600",
-      skills: [
-        { name: "Python", icon: Terminal },
-        { name: "JavaScript", icon: FileCode },
-        { name: "TypeScript", icon: FileCode },
-        { name: "C", icon: Code2 },
-        { name: "Kotlin", icon: Smartphone }
-      ]
-    },
-    {
-      title: "Web Development",
-      icon: Globe,
-      color: "from-green-500 to-teal-600",
-      skills: [
-        { name: "React.js", icon: Layers },
-        { name: "Node.js", icon: Server },
-        { name: "Express.js", icon: Zap },
-        { name: "HTML5", icon: Monitor },
-        { name: "CSS3", icon: Palette },
-        { name: "Tailwind CSS", icon: Sparkles }
-      ]
-    },
-    {
-      title: "Mobile Development",
-      icon: Smartphone,
-      color: "from-orange-500 to-red-600",
-      skills: [
-        { name: "React Native", icon: Smartphone },
-        { name: "Android Studio", icon: Settings },
-        { name: "Flutter", icon: Layers }
-      ]
-    },
-    {
-      title: "Database & Backend",
-      icon: Database,
-      color: "from-indigo-500 to-blue-600",
-      skills: [
-        { name: "MongoDB", icon: Database },
-        { name: "Firebase", icon: Zap },
-        { name: "MySQL", icon: Server },
-        { name: "PostgreSQL", icon: Database },
-        { name: "REST APIs", icon: Workflow }
-      ]
-    },
-    {
-      title: "AI/ML & Data Science",
-      icon: Brain,
-      color: "from-purple-500 to-pink-600",
-      skills: [
-        { name: "NumPy", icon: Cpu },
-        { name: "Scikit-Learn", icon: Brain },
-        { name: "TensorFlow", icon: Rocket },
-        { name: "Jupyter", icon: FileCode },
-        { name: "GenAI", icon: Sparkles }
-      ]
-    },
-    {
-      title: "Design & Tools",
-      icon: Palette,
-      color: "from-pink-500 to-rose-600",
-      skills: [
-        { name: "Figma", icon: Palette },
-        { name: "Canva", icon: Star },
-        { name: "VS Code", icon: Code2 },
-        { name: "Git/GitHub", icon: GitBranch }
-      ]
-    },
-    {
-      title: "Methodologies",
-      icon: Target,
-      color: "from-teal-500 to-cyan-600",
-      skills: [
-        { name: "Agile", icon: Target },
-        { name: "Scrum", icon: Trophy },
-        { name: "DevOps", icon: Settings },
-        { name: "CI/CD", icon: Workflow }
-      ]
-    },
-    {
-      title: "Cloud & Services",
-      icon: Cloud,
-      color: "from-cyan-500 to-blue-600",
-      skills: [
-        { name: "AWS", icon: Cloud },
-        { name: "Azure", icon: Shield },
-        { name: "GCP", icon: Cloud },
-        { name: "Razorpay", icon: Zap }
-      ]
-    }
+  const skills = [
+    { name: "Python", icon: Terminal, color: "from-blue-500 to-blue-600" },
+    { name: "Kotlin", icon: Smartphone, color: "from-orange-500 to-orange-600" },
+    { name: "Firebase", icon: Zap, color: "from-yellow-500 to-orange-600" },
+    { name: "Android", icon: Smartphone, color: "from-green-500 to-green-600" },
+    { name: "NumPy", icon: Cpu, color: "from-purple-500 to-purple-600" },
+    { name: "Scikit-Learn", icon: Brain, color: "from-indigo-500 to-indigo-600" },
+    { name: "MongoDB", icon: Database, color: "from-green-600 to-teal-600" },
+    { name: "Figma", icon: Palette, color: "from-pink-500 to-rose-600" },
+    { name: "Jupyter", icon: FileCode, color: "from-orange-500 to-red-600" },
+    { name: "VS Code", icon: Code2, color: "from-blue-600 to-cyan-600" }
   ];
 
   return (
@@ -146,56 +64,22 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
-            {skillCategories.map((category, categoryIndex) => {
-              const CategoryIcon = category.icon;
+          <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8 mb-16 max-w-4xl mx-auto">
+            {skills.map((skill, index) => {
+              const SkillIcon = skill.icon;
               return (
                 <div
-                  key={category.title}
-                  className="group relative bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 scale-in overflow-hidden"
-                  style={{ animationDelay: `${categoryIndex * 0.15}s` }}
+                  key={skill.name}
+                  className="group flex flex-col items-center gap-4 p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 scale-in cursor-pointer"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {/* Category Header */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color} group-hover:scale-110 transition-transform duration-300`}>
-                      <CategoryIcon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors duration-300">
-                        {category.title}
-                      </h3>
-                      <div className="flex items-center gap-1 mt-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-3 h-3 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-muted-foreground/30'}`} />
-                        ))}
-                      </div>
-                    </div>
+                  <div className={`p-4 bg-gradient-to-br ${skill.color} rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg group-hover:shadow-2xl`}>
+                    <SkillIcon className="w-8 h-8 text-white" />
                   </div>
-
-                  {/* Skills Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {category.skills.map((skill, skillIndex) => {
-                      const SkillIcon = skill.icon;
-                      return (
-                        <div
-                          key={skill.name}
-                          className="group/skill flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-primary/5 transition-all duration-300 cursor-pointer transform hover:scale-105"
-                          style={{ animationDelay: `${(categoryIndex * 0.15) + (skillIndex * 0.08)}s` }}
-                        >
-                          <div className={`p-3 bg-gradient-to-br ${category.color} rounded-xl group-hover/skill:scale-110 group-hover/skill:rotate-6 transition-all duration-300 shadow-lg group-hover/skill:shadow-xl`}>
-                            <SkillIcon className="w-6 h-6 text-white" />
-                          </div>
-                          
-                          <span className="text-sm font-medium text-foreground text-center group-hover/skill:text-primary transition-colors duration-300">
-                            {skill.name}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Hover Glow Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
+                  
+                  <span className="text-sm font-semibold text-foreground text-center group-hover:text-primary transition-colors duration-300">
+                    {skill.name}
+                  </span>
                 </div>
               );
             })}
