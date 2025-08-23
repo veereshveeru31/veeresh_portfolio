@@ -42,44 +42,33 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div className="space-y-8 slide-in-left">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-foreground leading-relaxed">
-                  I am an adaptable and results-oriented professional with a strong passion for continuous learning and innovation. 
-                  I quickly grasp new technologies and apply analytical thinking to solve complex problems efficiently.
+              <div className="space-y-6">
+                <p className="text-xl text-foreground leading-relaxed">
+                  AI/ML Engineering Student passionate about solving complex problems through innovative technology solutions.
                 </p>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  With a dedication to collaboration, strategic execution, and delivering measurable impact, I am eager to 
-                  contribute to challenging projects that drive growth and innovation. My journey spans from mechanical 
-                  engineering to AI/ML, showcasing my versatility and commitment to staying at the forefront of technology.
-                </p>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  Currently pursuing my Bachelor's in Artificial Intelligence & Machine Learning, I combine theoretical 
-                  knowledge with practical experience gained through internships and personal projects. I believe in the 
-                  power of technology to solve real-world problems and create positive impact.
+                  Currently pursuing B.E. in Artificial Intelligence & Machine Learning with 2+ years of hands-on experience 
+                  in software development and machine learning projects.
                 </p>
               </div>
 
-              <div className="bg-accent/50 rounded-lg p-6 border border-border">
-                <h3 className="font-semibold text-lg mb-3 text-primary">Quick Facts</h3>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="text-muted-foreground">Current Role:</span>
-                    <p className="font-medium">Software Engineer Intern</p>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground">Education:</span>
-                    <p className="font-medium">B.E. AI/ML Student</p>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground">Experience:</span>
-                    <p className="font-medium">2+ Years</p>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground">Location:</span>
-                    <p className="font-medium">India</p>
-                  </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="text-center p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                  <div className="text-2xl font-bold text-primary">2+</div>
+                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                  <div className="text-2xl font-bold text-primary">AI/ML</div>
+                  <div className="text-sm text-muted-foreground">Engineering</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                  <div className="text-2xl font-bold text-primary">10+</div>
+                  <div className="text-sm text-muted-foreground">Projects</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                  <div className="text-2xl font-bold text-primary">India</div>
+                  <div className="text-sm text-muted-foreground">Based</div>
                 </div>
               </div>
             </div>
