@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download, ArrowDown, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from './ui/button';
-import profileAvatar from '@/assets/profile-avatar.jpg';
+// Profile image will be referenced directly from uploads
 
 const Hero = () => {
   const handleDownloadResume = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="mb-8 fade-in">
             <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-portfolio-glow">
               <img
-                src={profileAvatar}
+                src="/lovable-uploads/4597853e-9ba9-4f1d-b2ff-34213f6bcd30.png"
                 alt="K Veeresh - Professional Profile"
                 className="w-full h-full object-cover"
               />
