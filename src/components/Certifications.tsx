@@ -53,13 +53,13 @@ const Certifications = () => {
             {certifications.map((cert, index) => (
               <Card
                 key={cert.title}
-                className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 scale-in"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-2 scale-in hover-lift hover-glow cursor-pointer"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardContent className="p-6">
+                <CardContent className="p-6 transform transition-all duration-300 group-hover:scale-[1.02]">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
-                      <Award className="h-6 w-6 text-white" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
+                      <Award className="h-6 w-6 text-white transition-all duration-300 group-hover:scale-110" />
                     </div>
                     {cert.verified && (
                       <div className="flex items-center text-emerald-600">
@@ -86,8 +86,8 @@ const Certifications = () => {
                       Issued: {cert.issueDate}
                     </p>
 
-                    <button className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary border border-primary/20 rounded-md hover:bg-primary/5 transition-colors">
-                      <ExternalLink className="h-4 w-4" />
+                    <button className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary border border-primary/20 rounded-md hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                      <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                       View Certificate
                     </button>
                   </div>

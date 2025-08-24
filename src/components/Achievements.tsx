@@ -53,13 +53,13 @@ const Achievements = () => {
               return (
                 <Card
                   key={achievement.title}
-                  className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 scale-in"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-2 scale-in hover-lift hover-glow cursor-pointer"
+                  style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 transform transition-all duration-300 group-hover:scale-[1.02]">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-white" />
+                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
+                        <Icon className="h-6 w-6 text-white transition-all duration-300 group-hover:scale-110" />
                       </div>
                       <span className="text-sm font-semibold text-primary">
                         {achievement.year}
