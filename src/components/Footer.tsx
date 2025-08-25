@@ -134,7 +134,12 @@ const Footer = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => window.open('mailto:veeresh18266@gmail.com', '_blank')}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="group border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground"
               >
                 <Mail className="mr-2 h-4 w-4 group-hover:scale-110 smooth-transition" />
