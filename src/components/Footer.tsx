@@ -140,7 +140,7 @@ const Footer = () => {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="group border-primary/20 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                className="group border-primary/40 bg-background/50 hover:border-primary hover:bg-primary hover:text-primary-foreground backdrop-blur-sm"
               >
                 <Mail className="mr-2 h-4 w-4 group-hover:scale-110 smooth-transition" />
                 Get In Touch
