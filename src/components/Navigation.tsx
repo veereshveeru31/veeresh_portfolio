@@ -19,7 +19,7 @@ const Navigation = () => {
 
     // Handle scroll for active section highlighting
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'achievements', 'certifications', 'contact'];
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'achievements', 'certifications', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -65,43 +65,45 @@ const Navigation = () => {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
-    { id: 'education', label: 'Education' },
     { id: 'achievements', label: 'Achievements' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14">
+          {/* Logo - 21st.dev inspired */}
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+              className="text-xl font-bold tracking-tight transition-all duration-200 hover:scale-105"
             >
-              K Veeresh
+              <span className="text-cyan-500">K</span>
+              <span className="text-foreground ml-1">Veeresh</span>
             </button>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium smooth-transition ${
-                    activeSection === item.id
-                      ? 'text-primary bg-accent'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+          {/* Desktop Navigation - 21st.dev minimal style */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg group ${
+                  activeSection === item.id
+                    ? 'text-foreground bg-muted'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                }`}
+              >
+                {item.label}
+                {activeSection === item.id && (
+                  <div className="absolute inset-x-1 bottom-0 h-0.5 bg-cyan-500 rounded-full" />
+                )}
+                <div className="absolute inset-x-1 bottom-0 h-0.5 bg-cyan-500 rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
+              </button>
+            ))}
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
