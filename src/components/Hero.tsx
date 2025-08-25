@@ -51,7 +51,7 @@ const Hero = () => {
             </h1>
 
             {/* Tagline */}
-            <p className="text-subtitle text-muted-foreground max-w-2xl mx-auto slide-in-right" style={{ animationDelay: '0.2s' }}>
+            <p className="text-subtitle text-muted-foreground max-w-2xl mx-auto animate-fade-in hover:scale-105 transition-all duration-500 ease-out" style={{ animationDelay: '0.2s' }}>
               Aspiring AI/ML Engineer & Software Developer
             </p>
 
