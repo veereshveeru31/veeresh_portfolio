@@ -18,7 +18,7 @@ const Certifications = () => {
       issueDate: "2024",
       category: "Cloud Technology",
       verified: true,
-      certificateUrl: "https://cloud.google.com/certification"
+      certificateUrl: "https://drive.google.com/file/d/1qQUWQq10QoPAKw0V2EMAnA_4aJm3nNUO/view?usp=sharing"
     },
     {
       title: "UI/UX Designing with ChatGPT",
