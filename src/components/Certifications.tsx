@@ -6,7 +6,7 @@ const Certifications = () => {
   const certifications = [
     {
       title: "Python Internship",
-      organization: "TIEI Vikasana",
+      organization: "Python Foundation",
       issueDate: "2024",
       category: "Programming",
       verified: true
