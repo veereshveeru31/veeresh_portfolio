@@ -29,7 +29,7 @@ const Certifications = () => {
       certificateUrl: "https://openai.com/chatgpt"
     },
     {
-      title: "Professional Development Certificate",
+      title: "TIEI Certificate",
       organization: "TIEI VIKASANA",
       issueDate: "2024",
       category: "Professional Skills",
