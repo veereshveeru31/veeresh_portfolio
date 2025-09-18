@@ -27,6 +27,14 @@ const Certifications = () => {
       category: "Design & UX",
       verified: true,
       certificateUrl: "https://openai.com/chatgpt"
+    },
+    {
+      title: "Professional Development Certificate",
+      organization: "TIEI VIKASANA",
+      issueDate: "2024",
+      category: "Professional Skills",
+      verified: true,
+      certificateUrl: "https://drive.google.com/file/d/1EOHrKj9SzTLFwCbvPToLEp8f8y8YN1tf/view?usp=sharing"
     }
   ];
 
