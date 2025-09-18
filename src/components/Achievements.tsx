@@ -3,29 +3,7 @@ import { Trophy, Award, Rocket } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 const Achievements = () => {
-  const achievements = [
-    {
-      title: "National Space Hackathon 2025",
-      organization: "IIT Delhi",
-      description: "Represented college with Team Packetelligence in innovative space technology competition.",
-      year: "2025",
-      type: "National Competition"
-    },
-    {
-      title: "2nd Prize - Zero to Hero Waste Management",
-      organization: "College Competition",
-      description: "Developed AI-driven solution for recycling efficiency with 35% improvement.",
-      year: "2024",
-      type: "Innovation Award"
-    },
-    {
-      title: "Software Engineering Excellence",
-      organization: "Formonex Solutions",
-      description: "Recognized for outstanding full-stack development contributions during internship.",
-      year: "2025",
-      type: "Professional Recognition"
-    }
-  ];
+  const achievements = [];
 
   const getIcon = (index: number) => {
     const icons = [Rocket, Trophy, Award];
