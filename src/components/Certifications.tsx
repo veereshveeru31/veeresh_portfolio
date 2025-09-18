@@ -10,7 +10,7 @@ const Certifications = () => {
       issueDate: "2024",
       category: "Programming",
       verified: true,
-      certificateUrl: "https://www.python.org/certification/"
+      certificateUrl: "https://drive.google.com/file/d/1w2p8XNWEy11Kcyi_hkwexh4g5i0m5TnQ/view?usp=sharing"
     },
     {
       title: "Google Cloud Certificate",
