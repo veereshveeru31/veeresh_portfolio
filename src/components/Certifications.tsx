@@ -9,21 +9,24 @@ const Certifications = () => {
       organization: "Python Foundation",
       issueDate: "2024",
       category: "Programming",
-      verified: true
+      verified: true,
+      certificateUrl: "https://www.python.org/certification/"
     },
     {
       title: "Google Cloud Certificate",
       organization: "Google Cloud Platform",
       issueDate: "2024",
       category: "Cloud Technology",
-      verified: true
+      verified: true,
+      certificateUrl: "https://cloud.google.com/certification"
     },
     {
       title: "UI/UX Designing with ChatGPT",
       organization: "Professional Development",
       issueDate: "2024",
       category: "Design & UX",
-      verified: true
+      verified: true,
+      certificateUrl: "https://openai.com/chatgpt"
     }
   ];
 
@@ -86,7 +89,10 @@ const Certifications = () => {
                       Issued: {cert.issueDate}
                     </p>
 
-                    <button className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary border border-primary/20 rounded-md hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-md">
+                    <button 
+                      onClick={() => window.open(cert.certificateUrl, '_blank')}
+                      className="w-full flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-primary border border-primary/20 rounded-md hover:bg-primary/10 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-md"
+                    >
                       <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
                       View Certificate
                     </button>
