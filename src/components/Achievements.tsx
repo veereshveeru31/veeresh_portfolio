@@ -17,13 +17,6 @@ const Achievements = () => {
       description: "Developed AI-driven solution for recycling efficiency with 35% improvement.",
       year: "2024",
       type: "Innovation Award"
-    },
-    {
-      title: "Software Engineering Excellence",
-      organization: "Formonex Solutions",
-      description: "Recognized for outstanding full-stack development contributions during internship.",
-      year: "2025",
-      type: "Professional Recognition"
     }
   ];
 
