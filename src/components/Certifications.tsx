@@ -7,7 +7,7 @@ const Certifications = () => {
     {
       title: "Python Internship",
       organization: "Python Foundation",
-      issueDate: "2023",
+      issueDate: "2024",
       category: "Programming",
       verified: true,
       certificateUrl: "https://drive.google.com/file/d/1w2p8XNWEy11Kcyi_hkwexh4g5i0m5TnQ/view?usp=sharing"
@@ -15,7 +15,7 @@ const Certifications = () => {
     {
       title: "Google Cloud Certificate",
       organization: "Google Cloud Platform",
-      issueDate: "2023",
+      issueDate: "2025",
       category: "Cloud Technology",
       verified: true,
       certificateUrl: "https://drive.google.com/file/d/1qQUWQq10QoPAKw0V2EMAnA_4aJm3nNUO/view?usp=sharing"
