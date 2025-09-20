@@ -26,7 +26,7 @@ const Certifications = () => {
       issueDate: "2023",
       category: "Design & UX",
       verified: true,
-      certificateUrl: "https://openai.com/chatgpt"
+      certificateUrl: "https://drive.google.com/file/d/1i973RfjAyxWFR2B92QaB5kPW2OdgTJLo/view?usp=sharing"
     },
     {
       title: "TIEI Certificate",
