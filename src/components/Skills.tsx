@@ -113,7 +113,7 @@ const Skills = () => {
                   </div>
                   
                   <div className="group p-6 bg-card/90 backdrop-blur-sm rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 dark:bg-card/95 dark:border-primary/40 dark:hover:border-primary/60">
-                    <Brain className="w-8 h-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
+                    <Brain className="w-8 h-8 text-secondary dark:text-secondary-foreground mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
                     <h4 className="font-bold text-secondary dark:text-secondary-foreground text-lg mb-2">AI/ML Innovator</h4>
                     <p className="text-sm text-muted-foreground">Intelligent solution architect</p>
                   </div>
