@@ -72,13 +72,13 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14">
-          {/* Logo - 21st.dev inspired */}
+      <div className="mobile-container">
+        <div className="flex justify-between items-center mobile-nav-height px-2 sm:px-0">
+          {/* Logo - Mobile optimized */}
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-xl font-bold tracking-tight transition-all duration-200 hover:scale-105"
+              className="text-lg sm:text-xl font-bold tracking-tight transition-all duration-200 hover:scale-105 py-2"
             >
               <span className="text-cyan-500">K</span>
               <span className="text-foreground ml-1">Veeresh</span>
@@ -107,17 +107,17 @@ const Navigation = () => {
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1 sm:space-x-2">
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleTheme}
-              className="p-2"
+              className="p-2 min-h-[40px] min-w-[40px]"
             >
               {isDark ? (
-                <Sun className="h-4 w-4" />
+                <Sun className="h-4 w-4 sm:h-5 sm:w-5" />
               ) : (
-                <Moon className="h-4 w-4" />
+                <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
               )}
             </Button>
 
@@ -126,27 +126,27 @@ const Navigation = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2"
+                className="p-2 min-h-[40px] min-w-[40px]"
               >
                 {isOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-5 w-5 sm:h-6 sm:w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
                 )}
               </Button>
             </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Improved */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
+            <div className="px-2 pt-2 pb-4 space-y-1 bg-background/95 backdrop-blur-md border-t border-border/50">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block px-3 py-2 w-full text-left rounded-md text-base font-medium smooth-transition ${
+                  className={`block px-4 py-3 w-full text-left rounded-lg text-base font-medium smooth-transition mobile-btn ${
                     activeSection === item.id
                       ? 'text-primary bg-accent'
                       : 'text-muted-foreground hover:text-foreground hover:bg-accent/50'

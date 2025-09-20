@@ -46,11 +46,11 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="certifications" className="py-12 md:py-20 relative">
+      <div className="mobile-container">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12 fade-in">
+          <div className="text-center mb-12 md:mb-16 fade-in">
             <h2 className="text-section-title font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
               Certifications
             </h2>
@@ -60,14 +60,14 @@ const Certifications = () => {
           </div>
 
           {/* Certifications Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             {certifications.map((cert, index) => (
               <Card
                 key={cert.title}
                 className="group hover:shadow-glow transition-all duration-500 hover:-translate-y-2 scale-in hover-lift hover-glow cursor-pointer"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <CardContent className="p-6 transform transition-all duration-300 group-hover:scale-[1.02]">
+                <CardContent className="p-4 sm:p-6 transform transition-all duration-300 group-hover:scale-[1.02]">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center transform transition-all duration-300 group-hover:rotate-12 group-hover:scale-110">
                       <Award className="h-6 w-6 text-white transition-all duration-300 group-hover:scale-110" />

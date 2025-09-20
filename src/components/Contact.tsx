@@ -101,11 +101,11 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-accent/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 md:py-20 bg-accent/20">
+      <div className="mobile-container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 fade-in">
+          <div className="text-center mb-12 md:mb-16 fade-in">
             <h2 className="text-section-title font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
               Let's Connect
             </h2>
@@ -114,7 +114,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
             <div className="space-y-8 slide-in-left">
               <div>

@@ -26,11 +26,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-12 md:py-20 relative">
+      <div className="mobile-container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 fade-in">
+          <div className="text-center mb-12 md:mb-16 fade-in">
             <h2 className="text-section-title font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
               About Me
             </h2>
@@ -39,7 +39,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Content */}
             <div className="space-y-8 slide-in-left">
               <div className="space-y-6">

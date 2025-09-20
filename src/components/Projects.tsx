@@ -49,11 +49,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-12 md:py-20 relative">
+      <div className="mobile-container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 fade-in">
+          <div className="text-center mb-12 md:mb-16 fade-in">
             <h2 className="text-section-title font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
               Featured Projects
             </h2>
@@ -63,14 +63,14 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid lg:grid-cols-1 gap-8">
+          <div className="grid lg:grid-cols-1 gap-6 md:gap-8">
             {projects.map((project, index) => (
               <div
                 key={project.title}
                 className={`project-card group ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="grid md:grid-cols-3 gap-6 items-start">
+                <div className="grid md:grid-cols-3 gap-4 md:gap-6 items-start">
                   {/* Project Icon & Title */}
                   <div className="md:col-span-1">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${project.color} flex items-center justify-center mb-4 group-hover:scale-110 smooth-transition`}>
@@ -84,7 +84,7 @@ const Projects = () => {
                     </p>
                     
                     {/* Action Buttons */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-2">
                       <Button
                         variant="outline"
                         size="sm"

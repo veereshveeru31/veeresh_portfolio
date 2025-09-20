@@ -40,14 +40,14 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-background via-accent/5 to-background relative overflow-hidden">
-      {/* Floating Background Elements */}
+    <section id="skills" className="py-12 md:py-20 bg-gradient-to-br from-background via-accent/5 to-background relative overflow-hidden">
+      {/* Floating Background Elements - Hidden on mobile */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float hidden sm:block" />
+        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-float hidden sm:block" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="mobile-container relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-20 fade-in">
@@ -64,20 +64,20 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-8 mb-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16 max-w-4xl mx-auto">
             {skills.map((skill, index) => {
               const SkillIcon = skill.icon;
               return (
                 <div
                   key={skill.name}
-                  className="group flex flex-col items-center gap-4 p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 scale-in cursor-pointer"
+                  className="group flex flex-col items-center gap-3 sm:gap-4 mobile-card bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 scale-in cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`p-4 bg-gradient-to-br ${skill.color} rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg group-hover:shadow-2xl`}>
-                    <SkillIcon className="w-8 h-8 text-white" />
+                  <div className={`p-3 sm:p-4 bg-gradient-to-br ${skill.color} rounded-xl sm:rounded-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg group-hover:shadow-2xl`}>
+                    <SkillIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   
-                  <span className="text-sm font-semibold text-foreground text-center group-hover:text-primary transition-colors duration-300">
+                  <span className="text-xs sm:text-sm font-semibold text-foreground text-center group-hover:text-primary transition-colors duration-300">
                     {skill.name}
                   </span>
                 </div>
@@ -87,7 +87,7 @@ const Skills = () => {
 
           {/* Skills Summary */}
           <div className="text-center fade-in" style={{ animationDelay: '1.2s' }}>
-            <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm rounded-3xl p-10 border border-border/50 portfolio-shadow overflow-hidden">
+            <div className="relative bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-border/50 portfolio-shadow overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-50" />
               
@@ -105,7 +105,7 @@ const Skills = () => {
                   drive technological advancement and create meaningful impact.
                 </p>
                 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                   <div className="group p-6 bg-primary/10 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
                     <Rocket className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
                     <h4 className="font-bold text-primary text-lg mb-2">Full-Stack Expert</h4>
